@@ -1,5 +1,7 @@
 # Frontend labs
 
+For visiting the lab pages use links below
+
 ### Links
 
-- [Lab1]("https://minezeri.github.io/frontend_labs/Lab1/")
+1. [Lab1]("https://minezeri.github.io/frontend_labs/Lab1/")
