@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    background-color: grey;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    font-family: Arial serif;
+    font-size: 50px;
+    padding: 20px;
+    color: #333333;
+    text-decoration: solid;
+}
+
+a:hover {
+    color: dimgrey;
+}
