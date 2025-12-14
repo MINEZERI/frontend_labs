@@ -1,0 +1,73 @@
+.position-container {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.circle1 {
+    background: rgba(0, 0, 255, 50%);
+    border: black solid 2px;
+    border-radius: 50%;
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 75px;
+    left: 0;
+}
+
+.circle2 {
+    background: rgba(255, 0, 0, 50%);
+    border: black solid 2px;
+    border-radius: 50%;
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 37px;
+}
+
+.circle3 {
+    background: rgba(0, 255, 0, 50%);
+    border: black solid 2px;
+    border-radius: 50%;
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 75px;
+    left: 75px;
+}
+
+.transform-container {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.circle {
+    border: black solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    top: 75px;
+    left: 0;
+    background: rgba(0, 0, 255, 50%);
+}
+
+.green-transform {
+    transform: translate(75px, 0);
+    background: rgba(0, 255, 0, 50%);
+}
+
+.red-transform {
+    transform: translate(37px, -75px);
+    background: rgba(255, 0, 0, 50%);
+}
