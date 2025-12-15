@@ -10,5 +10,5 @@ For visiting the lab pages use links below
 4. [Lab4](https://minezeri.github.io/frontend_labs/Lab4)
 5. [Lab5](https://minezeri.github.io/frontend_labs/Lab5)
 6. [Lab5](https://minezeri.github.io/frontend_labs/Lab6)
-7. [Lab5](https://minezeri.github.io/frontend_labs/Lab7)
+7. [Lab5](https://lab7-react-gsi4383dg-minezeris-projects.vercel.app/)
 8. [Lab5](https://minezeri.github.io/frontend_labs/Lab8)

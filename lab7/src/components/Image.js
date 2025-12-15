@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 function Image() {
-	// Стейт для розмірів та видимості
 	const [size, setSize] = useState({width: 600, height: 300});
 	const [isVisible, setIsVisible] = useState(true);
 	
