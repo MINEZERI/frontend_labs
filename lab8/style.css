@@ -1,4 +1,3 @@
-/* --- Global Reset & Variables --- */
 * {
     margin: 0;
     padding: 0;
@@ -22,12 +21,11 @@ ul {
     list-style: none;
 }
 
-/* Colors from screenshot */
 :root {
-    --primary-blue: #009DFF; /* Light blue button */
+    --primary-blue: #009DFF;
     --text-dark: #222;
     --text-light: #777;
-    --accent-gold: #cfaa6e; /* Hypothetical accent */
+    --accent-gold: #cfaa6e;
     --light-bg: #f9f9f9;
 }
 
@@ -63,7 +61,6 @@ p {
     font-size: 15px;
 }
 
-/* --- Header & Hero --- */
 .header {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
@@ -195,7 +192,6 @@ p {
     color: black;
 }
 
-/* --- Split Layout (About & Food) --- */
 .split-layout {
     display: flex;
     align-items: center;
@@ -217,10 +213,9 @@ p {
 .image-content {
     flex: 1;
     position: relative;
-    height: 400px; /* Adjust based on need */
+    height: 400px;
 }
 
-/* Right Overlap (About) */
 .img-wrapper-right {
     position: relative;
     width: 100%;
@@ -246,7 +241,6 @@ p {
     border: 5px solid white;
 }
 
-/* Left Overlap (Food) */
 .reverse {
     flex-direction: row-reverse;
 }
@@ -276,7 +270,6 @@ p {
     border: 5px solid white;
 }
 
-/* --- Offers Section --- */
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -347,11 +340,10 @@ p {
     border-color: var(--primary-blue);
 }
 
-/* --- Video Section --- */
 .video-section {
     height: 500px;
     background: url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -409,14 +401,13 @@ p {
     transform: scale(1.1);
 }
 
-/* --- Responsive Design (Adaptive) --- */
 @media (max-width: 992px) {
     .offers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .nav-left, .nav-right {
-        display: none; /* Hide default nav items */
+        display: none;
     }
 
     .mobile-menu-icon {
@@ -474,7 +465,7 @@ p {
     }
 
     .arrow {
-        display: none; /* Hide arrows on mobile */
+        display: none;
     }
 
     .hero-content {
@@ -482,45 +473,37 @@ p {
     }
 }
 
-/* --- ВИПРАВЛЕНИЙ БЛОК (About & Food) --- */
-
-/* 1. Робимо контейнер гнучким, щоб елементи стояли в рядок */
 .img-wrapper-right,
 .img-wrapper-left {
-    display: flex !important; /* Вмикає режим рядка */
-    flex-direction: row !important; /* Гарантує, що це саме рядок, а не колонка */
-    align-items: center !important; /* Центруємо по вертикалі */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
     justify-content: center !important;
-    gap: 30px !important; /* Відступ між картинками */
+    gap: 30px !important;
     width: 100% !important;
-    height: auto !important; /* Висота підлаштовується під контент */
-    padding: 40px 0; /* Додаємо простір зверху/знизу для зсуву */
+    height: auto !important;
+    padding: 40px 0;
 }
 
-/* 2. Скидаємо абсолютне позиціонування для картинок */
 .img-wrapper-right img,
 .img-wrapper-left img {
-    position: static !important; /* ГОЛОВНЕ: Вимикає накладання */
-    width: 45% !important; /* Ширина трохи менше половини */
-    height: 300px !important; /* Фіксована висота */
+    position: static !important;
+    width: 45% !important;
+    height: 300px !important;
     object-fit: cover !important;
-    border: none !important; /* Прибираємо рамки */
-    margin: 0 !important; /* Прибираємо зайві відступи */
+    border: none !important;
+    margin: 0 !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* 3. Робимо зсув (сходинки) */
-/* Ліва картинка (перша в коді) - йде вгору */
 .img-main {
     transform: translateY(-30px);
 }
 
-/* Права картинка (друга в коді) - йде вниз */
 .img-overlap {
     transform: translateY(30px);
 }
 
-/* 4. Фікс для мобілок (щоб не ламалося на телефоні) */
 @media (max-width: 768px) {
     .img-wrapper-right,
     .img-wrapper-left {
