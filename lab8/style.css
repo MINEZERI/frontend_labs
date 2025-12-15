@@ -401,78 +401,6 @@ p {
     transform: scale(1.1);
 }
 
-@media (max-width: 992px) {
-    .offers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav-left, .nav-right {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        right: 30px;
-    }
-
-    .navbar {
-        justify-content: center;
-    }
-
-    .hero-text h1 {
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .split-layout, .split-layout.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image-content {
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .img-wrapper-right .img-main,
-    .img-wrapper-left .img-main {
-        position: relative;
-        width: 80%;
-        margin: 0 auto;
-        left: auto;
-        right: auto;
-    }
-
-    .img-wrapper-right .img-overlap,
-    .img-wrapper-left .img-overlap {
-        position: absolute;
-        width: 60%;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -50px;
-        border: 3px solid white;
-    }
-
-    .offers-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .video-content h2 {
-        font-size: 32px;
-        padding: 0 10px;
-    }
-
-    .arrow {
-        display: none;
-    }
-
-    .hero-content {
-        justify-content: center;
-    }
-}
-
 .img-wrapper-right,
 .img-wrapper-left {
     display: flex !important;
@@ -502,24 +430,4 @@ p {
 
 .img-overlap {
     transform: translateY(30px);
-}
-
-@media (max-width: 768px) {
-    .img-wrapper-right,
-    .img-wrapper-left {
-        gap: 15px !important;
-    }
-
-    .img-wrapper-right img,
-    .img-wrapper-left img {
-        height: 200px !important;
-    }
-
-    .img-main {
-        transform: translateY(-15px);
-    }
-
-    .img-overlap {
-        transform: translateY(15px);
-    }
 }
