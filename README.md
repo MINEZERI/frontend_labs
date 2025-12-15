@@ -7,4 +7,4 @@ For visiting the lab pages use links below
 1. [Lab1](https://minezeri.github.io/frontend_labs/Lab1)
 2. [Lab2](https://minezeri.github.io/frontend_labs/Lab2)
 3. [Lab3](https://minezeri.github.io/frontend_labs/Lab3)
-3. [Lab4](https://minezeri.github.io/frontend_labs/Lab4)
+4. [Lab4](https://minezeri.github.io/frontend_labs/Lab4)
