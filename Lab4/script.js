@@ -24,14 +24,14 @@ const operation = new Map([
 		el.style.display = "block";
 	}],
 	['enlarge', (el) => {
-		if (Number(el.height) < 6) el.height = "6"
-		if (Number(el.width) < 12) el.width = "12"
 		el.height = String(Number(el.height) * 1.25);
 		el.width = String(Number(el.width) * 1.25);
 	}],
 	['reduce', (el) => {
 		el.height = String(Number(el.height) / 1.25);
 		el.width = String(Number(el.width) / 1.25);
+		if (Number(el.height) < 6) el.height = "6"
+		if (Number(el.width) < 12) el.width = "12"
 	}],
 	['remove', (el) => {
 		el.style.display = "none";
