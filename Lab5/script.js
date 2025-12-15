@@ -2,7 +2,7 @@ const form = document.getElementById("userForm");
 
 const regexPatterns = {
 	fullname: /^[A-Za-zА-Яа-яІіЇїЄє']+\s[A-ZА-ЯІЇЄ]\.[A-ZА-ЯІЇЄ]\.$/,
-	group: /^[A-Za-zА-Яа-яІіЇїЄє]{2}-\d{2}$/,
+	group: /^[A-ZА-ЯІЇЄ]{2}-\d{2}$/,
 	phone: /^\d{3}-\d{3}-\d{2}-\d{2}$/,
 	address: /^[A-Za-zА-Яа-яІіЇїЄє\s-]+$/,
 	email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/
