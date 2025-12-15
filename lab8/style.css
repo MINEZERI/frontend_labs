@@ -1,0 +1,542 @@
+/* --- Global Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    color: #555;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Colors from screenshot */
+:root {
+    --primary-blue: #009DFF; /* Light blue button */
+    --text-dark: #222;
+    --text-light: #777;
+    --accent-gold: #cfaa6e; /* Hypothetical accent */
+    --light-bg: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.sub-title {
+    color: var(--primary-blue);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* --- Header & Hero --- */
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-left a {
+    color: white;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-left a.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-box {
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo small {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.socials a {
+    color: white;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.btn-book {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.mobile-menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    background: white;
+    color: black;
+}
+
+/* --- Split Layout (About & Food) --- */
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.link-learn {
+    color: var(--text-dark);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
+.image-content {
+    flex: 1;
+    position: relative;
+    height: 400px; /* Adjust based on need */
+}
+
+/* Right Overlap (About) */
+.img-wrapper-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper-right .img-main {
+    width: 65%;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.img-wrapper-right .img-overlap {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    border: 5px solid white;
+}
+
+/* Left Overlap (Food) */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.img-wrapper-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper-left .img-main {
+    width: 65%;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.img-wrapper-left .img-overlap {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    border: 5px solid white;
+}
+
+/* --- Offers Section --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.offer-card {
+    background: white;
+    transition: 0.3s;
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px 0;
+}
+
+.card-body h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: var(--text-dark);
+}
+
+.card-body ul {
+    margin-bottom: 25px;
+}
+
+.card-body ul li {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.card-body ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-light);
+}
+
+.btn-outline {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: var(--primary-blue);
+    padding: 10px 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn-outline:hover {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* --- Video Section --- */
+.video-section {
+    height: 500px;
+    background: url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.video-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.video-content {
+    position: relative;
+    z-index: 2;
+}
+
+.video-sub {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.video-content h2 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    background: white;
+    color: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsive Design (Adaptive) --- */
+@media (max-width: 992px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-left, .nav-right {
+        display: none; /* Hide default nav items */
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .split-layout, .split-layout.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .img-wrapper-right .img-main,
+    .img-wrapper-left .img-main {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        left: auto;
+        right: auto;
+    }
+
+    .img-wrapper-right .img-overlap,
+    .img-wrapper-left .img-overlap {
+        position: absolute;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+        border: 3px solid white;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-content h2 {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+
+    .arrow {
+        display: none; /* Hide arrows on mobile */
+    }
+
+    .hero-content {
+        justify-content: center;
+    }
+}
+
+/* --- ВИПРАВЛЕНИЙ БЛОК (About & Food) --- */
+
+/* 1. Робимо контейнер гнучким, щоб елементи стояли в рядок */
+.img-wrapper-right,
+.img-wrapper-left {
+    display: flex !important; /* Вмикає режим рядка */
+    flex-direction: row !important; /* Гарантує, що це саме рядок, а не колонка */
+    align-items: center !important; /* Центруємо по вертикалі */
+    justify-content: center !important;
+    gap: 30px !important; /* Відступ між картинками */
+    width: 100% !important;
+    height: auto !important; /* Висота підлаштовується під контент */
+    padding: 40px 0; /* Додаємо простір зверху/знизу для зсуву */
+}
+
+/* 2. Скидаємо абсолютне позиціонування для картинок */
+.img-wrapper-right img,
+.img-wrapper-left img {
+    position: static !important; /* ГОЛОВНЕ: Вимикає накладання */
+    width: 45% !important; /* Ширина трохи менше половини */
+    height: 300px !important; /* Фіксована висота */
+    object-fit: cover !important;
+    border: none !important; /* Прибираємо рамки */
+    margin: 0 !important; /* Прибираємо зайві відступи */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Робимо зсув (сходинки) */
+/* Ліва картинка (перша в коді) - йде вгору */
+.img-main {
+    transform: translateY(-30px);
+}
+
+/* Права картинка (друга в коді) - йде вниз */
+.img-overlap {
+    transform: translateY(30px);
+}
+
+/* 4. Фікс для мобілок (щоб не ламалося на телефоні) */
+@media (max-width: 768px) {
+    .img-wrapper-right,
+    .img-wrapper-left {
+        gap: 15px !important;
+    }
+
+    .img-wrapper-right img,
+    .img-wrapper-left img {
+        height: 200px !important;
+    }
+
+    .img-main {
+        transform: translateY(-15px);
+    }
+
+    .img-overlap {
+        transform: translateY(15px);
+    }
+}
