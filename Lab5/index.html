@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторна робота 5</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h1>Форма</h1>
+	<form id="userForm">
+		<div class="form-group">
+			<label for="fullname">1. ПІБ (ТТТТТТ Т.Т.):</label>
+			<input type="text" id="fullname" placeholder="Петров П.П.">
+		</div>
+
+		<div class="form-group">
+			<label for="group">Група (ТТ-ЧЧ):</label>
+			<input type="text" id="group" placeholder="ІМ-32">
+		</div>
+
+		<div class="form-group">
+			<label for="phone">Телефон (ЧЧЧ-ЧЧЧ-ЧЧ-ЧЧ):</label>
+			<input type="text" id="phone" placeholder="099-123-45-67">
+		</div>
+
+		<div class="form-group">
+			<label for="address">Адреса (ТТТТТТ):</label>
+			<input type="text" id="address" placeholder="Київ">
+		</div>
+
+		<div class="form-group">
+			<label for="email">e-mail (тттттт@ттттт.com):</label>
+			<input type="text" id="email" placeholder="email@example.com">
+		</div>
+
+		<button type="submit">Перевірити</button>
+	</form>
+</div>
+
+<div class="container">
+	<h1>Таблиця</h1>
+	<p>Наведіть, клікніть або двічі клікніть на комірку 10</p>
+
+	<div class="controls">
+		<label for="colorPicker">Оберіть колір</label>
+		<input type="color" id="colorPicker" value="#ff0000">
+	</div>
+
+	<table id="gridTable">
+	</table>
+</div>
+
+</body>
+</html>
