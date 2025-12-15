@@ -6,7 +6,7 @@ const img = document.querySelector("img")
 const buttons = document.querySelector(".button-container")
 
 const getRandomHexColor = function () {
-	return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6)
+	return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")
 }
 
 table.addEventListener("click", (e) => {
